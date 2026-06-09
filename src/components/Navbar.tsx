@@ -32,7 +32,7 @@ export default function Navbar() {
           <img
             src="/assets/EAN Logo White.png"
             alt="EAN Jets"
-            className="h-10 w-auto opacity-90 hover:opacity-100 transition-opacity"
+            className="h-16 md:h-18 lg:h-20 w-auto transition-transform duration-200 hover:scale-105"
           />
         </a>
 
