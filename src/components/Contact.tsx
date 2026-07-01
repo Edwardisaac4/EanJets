@@ -69,7 +69,7 @@ export default function Contact() {
           message: formData.message,
           to_name: "EAN Jets Operations",
         },
-        publicKey
+        { publicKey }
       );
 
       if (result.status === 200) {
