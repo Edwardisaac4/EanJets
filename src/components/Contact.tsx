@@ -39,11 +39,11 @@ export default function Contact() {
     // Check if the credentials have been configured
     const isConfigured =
       serviceId &&
-      serviceId !== "service_sqn3hsn" &&
+      serviceId !== "your_service_id_here" &&
       templateId &&
-      templateId !== "template_15tp683" &&
+      templateId !== "your_template_id_here" &&
       publicKey &&
-      publicKey !== "oYKWJFbz3R1J9QdQv";
+      publicKey !== "your_public_key_here";
 
     if (!isConfigured) {
       console.warn(
@@ -111,7 +111,7 @@ export default function Contact() {
           <div className="lg:col-span-5 space-y-8 lg:sticky lg:top-24">
             <div className="p-8 rounded-2xl bg-bg-secondary border border-border-subtle backdrop-blur-md">
               <h3 className="text-xl font-bold text-text-primary mb-6">Contact Information</h3>
-              
+
               <div className="space-y-6">
                 {/* Location */}
                 <div className="flex items-start gap-4">
@@ -176,7 +176,7 @@ export default function Contact() {
           {/* Right Column — Form */}
           <div className="lg:col-span-7">
             <div className="p-8 rounded-2xl bg-bg-secondary border border-border-subtle backdrop-blur-md relative overflow-hidden">
-              
+
               {/* Form Success State Screen Overlay */}
               {status === "success" && (
                 <div className="absolute inset-0 bg-bg-secondary/95 backdrop-blur-sm z-10 flex flex-col items-center justify-center p-8 text-center animate-fade-in">
