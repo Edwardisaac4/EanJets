@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import type { FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 
@@ -21,6 +21,16 @@ export default function Contact() {
   const [formData, setFormData] = useState<FormState>(initialFormState);
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    if (status === "success") {
+      const timer = setTimeout(() => {
+        setStatus("idle");
+      }, 30000); // 30 seconds
+
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
