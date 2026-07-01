@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer
-      id="contact"
+      id="footer"
       className="border-t border-border-subtle bg-bg-secondary py-12"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
