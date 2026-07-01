@@ -39,11 +39,11 @@ export default function Contact() {
     // Check if the credentials have been configured
     const isConfigured =
       serviceId &&
-      serviceId !== "your_service_id_here" &&
+      serviceId !== "service_sqn3hsn" &&
       templateId &&
-      templateId !== "your_template_id_here" &&
+      templateId !== "template_15tp683" &&
       publicKey &&
-      publicKey !== "your_public_key_here";
+      publicKey !== "oYKWJFbz3R1J9QdQv";
 
     if (!isConfigured) {
       console.warn(
