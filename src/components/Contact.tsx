@@ -63,11 +63,11 @@ export default function Contact() {
         serviceId,
         templateId,
         {
-          from_name: formData.name,
+          name: formData.name,
           from_email: formData.email,
-          subject: formData.subject,
+          title: formData.subject,
           message: formData.message,
-          to_name: "EAN Jets Operations",
+          time: new Date().toLocaleString(),
         },
         { publicKey }
       );
