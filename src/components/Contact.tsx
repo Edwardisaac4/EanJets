@@ -81,10 +81,9 @@ export default function Contact() {
     } catch (error) {
       console.error("EmailJS Error:", error);
       setStatus("error");
-      const err = error as { text?: string } | null | undefined;
-      setErrorMessage(
-        err?.text || "An unexpected error occurred while sending your request. Please try again."
-      );
+      const err = error as { text?: string; message?: string } | null | undefined;
+      const detail = err?.text || err?.message || JSON.stringify(error) || "An unexpected error occurred.";
+      setErrorMessage(detail);
     }
   };
 
